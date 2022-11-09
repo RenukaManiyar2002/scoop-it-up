@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myFunction() {
+            location.href = "main.html";
+        }
+    </script>
+
+    <title>Scoop it up</title>
+    <link rel="icon" href="img/scoop.png">
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css">     -->
+    <link rel="icon" href="img/logo.png">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="video/loginbg.mp4" type="video/mp4">
+    </video>
+    <link href="css/login.css" rel="stylesheet">
+    <div>
+        <div class="container">
+            <div class="box-1">
+                <div class="content-holder">
+                    <h2>Hello!</h2>
+
+                    <button class="button-1" onclick="signup()">Sign up</button>
+                    <button class="button-2" onclick="login()">Login</button>
+                </div>
+            </div>
+
+
+            <!--Forms-->
+            <div class="box-2">
+                <div class="login-form-container">
+                    <h1>Login Form</h1>
+                    <input type="text" placeholder="Username" class="input-field" required>
+                    <br><br>
+                    <input type="password" placeholder="Password" class="input-field" required>
+                    <br><br>
+                    <button class="login-button" type="button" onclick="myFunction()">Login</button>
+                </div>
+
+
+                <!--Create Container for Signup form-->
+                <div class="signup-form-container">
+                    <h1>Sign Up Form</h1>
+                    <input type="text" placeholder="Username" class="input-field">
+                    <br><br>
+                    <input type="email" placeholder="Email" class="input-field">
+                    <br><br>
+                    <input type="password" placeholder="Password" class="input-field">
+                    <br><br>
+                    <button class="signup-button" type="button" onclick="login()">Sign Up</button>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Scoop it up</title>
+  <link rel="icon" href="img/scoop.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <style type="text/css">
+    body::-webkit-scrollbar-thumb:vertical {
+      background: url('img/pop-unscreen.gif') no-repeat;
+      background-size: 95px 103px;
+      display: block;
+      width: 30px;
+      height: 100px;
+    }
+
+    /*  scrollbar */
+    body::-webkit-scrollbar {
+      width: 2cm;
+    }
+
+    /* scrollbar end */
+    #myVideo {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+      opacity: 0.7;
+
+    }
+
+    body {
+      /* background: #603601; */
+      padding-top: 40px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      border-radius: 20px 20px 0px 0px;
+      padding: 10px 0px;
+      background: #361500;
+      color: #fff;
+      width: 100%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .faq-item {
+      margin-bottom: 2px;
+      margin-top: 2px;
+    }
+
+    .faq-body {
+      display: none;
+      margin-top: 10px;
+    }
+
+    .faq-wrapper {
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .faq-inner {
+      padding: 30px;
+      background: #603601;
+      color: #E3CAA5;
+    }
+
+    .faq-plus {
+      float: right;
+      font-size: 1.4em;
+      line-height: 1em;
+      cursor: pointer;
+    }
+
+    hr {
+      background-color: #9b9b9b;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="faq-wrapper">
+        <div class="header">
+          <h1>FAQs</h1>
+        </div>
+        <div class="faq-inner">
+          <div class="faq-item">
+            <h3>
+              Address of the ice cream parlour ?
+              <span class="faq-plus">&plus;</span>
+            </h3>
+            <div class="faq-body">
+              Address:
+              Shop no.1, Green Road,
+              Hiranandani Estate, Thane(W)
+            </div>
+          </div>
+          <hr>
+          <div class="faq-item">
+            <h3>
+              Do yo give any special offers?
+              <span class="faq-plus">&plus;</span>
+            </h3>
+            <div class="faq-body">
+              There are various offers provided by us and 10% discount on every 10th day of each month.
+            </div>
+          </div>
+          <hr>
+          <div class="faq-item">
+            <h3>
+              Best flavour of scoop it up
+              <span class="faq-plus">&plus;</span>
+            </h3>
+            <div class="faq-body">
+              Our butterscotch flavour Icecream is liked by many customers and have special feedbacks about it. You can
+              try any flavour according to you . We will try to give our 100% to satisfy you.
+            </div>
+          </div>
+          <hr>
+          <div class="faq-item">
+            <h3>
+              Any pre bookings options are available for cafeteria?
+              <span class="faq-plus">&plus;</span>
+            </h3>
+            <div class="faq-body">
+              Yes ! You can prebook several tables ,but you need to confirm your booking 12 hours before by calling on
+              our number .
+            </div>
+          </div>
+          <hr>
+          <div class="faq-item">
+            <h3>
+              What do I know about ice cream?
+              <span class="faq-plus">&plus;</span>
+            </h3>
+            <div class="faq-body">
+              Ice cream is a colloidal emulsion made with water, ice, milk fat, milk protein, sugar and air. Water and
+              fat have the highest proportions by weight creating an emulsion that has dispersed phase as fat globules.
+              The emulsion is turned into foam by incorporating air cells which are frozen to form dispersed ice cells.
+            </div>
+          </div>
+          <hr>
+          <div class="faq-item">
+            <h3>
+              Did you know fact about ice cream?
+              <span class="faq-plus">&plus;</span>
+            </h3>
+            <div class="faq-body">
+              Ice cream recipe came to North America 250 years after it was discovered by Christopher Columbus. The most
+              popular flavor of ice cream is vanilla. After it come chocolates, strawberry, cookies n' cream, and
+              others. Ice cream cones were invented during 1904 World's Fair in St.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(".faq-plus").on('click', function () {
+      $(this).parent().parent().find('.faq-body').slideToggle();
+    });
+  </script>
+</body>
+<video autoplay muted loop id="myVideo">
+  <source src="video/loginbg.mp4" type="video/mp4">
+</video>
+
+</html>

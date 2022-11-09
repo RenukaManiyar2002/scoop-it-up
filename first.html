@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4363/4363654.png">
+  <title>Scoop it up</title>
+  <link rel="icon" href="img/scoop.png">
+  <style>
+    #myVideo {
+
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .wrap {
+
+      width: 200px;
+      height: 100px;
+      font-size: 20px;
+      padding: 8px;
+      border-radius: 5px;
+      text-align: center;
+      position: relative;
+      top: 346px;
+      right: 22px;
+      left: 900px;
+    }
+
+    .button {
+      min-width: 300px;
+      min-height: 60px;
+      font-family: 'Nunito', sans-serif;
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-weight: 700;
+      color: #313133;
+      background: #4FD1C5;
+      background: linear-gradient(90deg, #BE8C63 0%, #A97155 100%);
+      border: none;
+      border-radius: 1000px;
+      box-shadow: 12px 12px 24px #733C3C;
+      transition: all 0.3s ease-in-out 0s;
+      cursor: pointer;
+      outline: none;
+      position: relative;
+      padding: 10px;
+    }
+
+    button::before {
+      content: '';
+      border-radius: 1000px;
+      min-width: calc(300px + 12px);
+      min-height: calc(60px + 12px);
+      border: 6px solid #361500;
+      box-shadow: 0 0 60px #CC9544;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all .3s ease-in-out 0s;
+    }
+
+    .button:hover,
+    .button:focus {
+      color: #313133;
+      transform: translateY(-6px);
+    }
+
+    button:hover::before,
+    button:focus::before {
+      opacity: 1;
+    }
+
+    button::after {
+      content: '';
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      border: 6px solid #CC9544;
+      position: absolute;
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: ring 1.5s infinite;
+    }
+
+    button:hover::after,
+    button:focus::after {
+      animation: none;
+      display: none;
+    }
+
+    @keyframes ring {
+      0% {
+        width: 30px;
+        height: 30px;
+        opacity: 1;
+      }
+
+      100% {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+      }
+    }
+  </style>
+  <script>
+    document.getElementById("myBtn").style.display = "none";
+
+    function showStuff() {
+      document.getElementById("myBtn").style.display = "inline";
+    }
+
+    function myFunction() {
+      window.location = "project.html"
+    }
+
+    setTimeout(showStuff, 5000);
+    function btn() {
+      location.replace("login.html");
+    }
+  </script>
+</head>
+
+<body onload="setTimeout(showStuff, 6000)">
+  <video autoplay muted loop id="myVideo">
+    <source src="video/video.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <!-- <button id="myBtn" style="display: none;" onclick="btn()">LOGIN</button> -->
+
+  <div class="wrap">
+    <button class="button" id="myBtn" style="display: none;" onclick="btn()">LOGIN</button>
+  </div>
+</body>
+
+</html>
